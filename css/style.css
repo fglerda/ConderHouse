@@ -27,6 +27,7 @@ body{
     color: #fff;
     grid-area: header;
 }
+
 header{
     display: flex;
     justify-content: space-between;
@@ -34,12 +35,14 @@ header{
     margin: .5rem;
     align-items: center;
     border-radius: 4px;
+    flex-wrap: wrap;
 }   
 
 nav ul{
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 nav ul a{
@@ -303,19 +306,24 @@ fieldset{
     font-family: 'Share Tech Mono', monospace;
 }
 
-/* pequeño */
-@media screen and (max-whidth: 576px) {
+/* grande */
+@media (min-width: 992px) {
     .catalogos{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2 1fr);
-        /* gap: 1px; */
-        /* margin: 50px; */
+        grid-template-columns: 1fr 1fr 1fr;
     }
-  }
-
+    .contenedor {
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "redes redes redes"
+        "footer footer footer";
+    }
+}
 /* mediano */
-@media screen and (max-whidth: 768px) {
+@media (max-width: 991px) {
+    .catalogos{
+        grid-template-columns: 1fr 1fr;
+    }
     .contenedor {
         grid-template-areas:
         "header header header"
@@ -325,14 +333,10 @@ fieldset{
     }
   }
 
-  /* grande */
-/* @media screen and (max-whidth: 992px) {
-    .contenedor {
-        grid-template-areas:
-        "header header header"
-        "main main main"
-        "redes redes redes"
-        "footer footer footer";
+  /* pequeño */
+@media (max-width: 576px) {
+    .catalogos{
+        grid-template-columns: 1fr;
     }
 
-  
+  }
