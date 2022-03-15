@@ -259,7 +259,7 @@ fieldset{
     height: auto;
 }
 
-.contenedor .redes {
+.redes {
     background: #3a3a3b;
     /* color: #fff; */
     height: 100px;
@@ -269,7 +269,7 @@ fieldset{
     /* justify-content: center; */
 }
 
-.contenedor .redes {
+.redes {
     grid-area: redes;
 }
 
@@ -279,7 +279,7 @@ fieldset{
 }
 
 /* aplica grid al footer */
-.contenedor .footer {
+.footer {
     /* background: #12203e; */
     /* color: #fff; */
     grid-area: footer;
