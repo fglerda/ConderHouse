@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a0e9d1;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.contenedor {
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "redes redes redes"
+      "footer footer footer";
+}
+
+.contenedor .header {
+    /* background: #12203e; */
+    color: #fff;
+    grid-area: header;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin: .5rem;
+    align-items: center;
+    border-radius: 4px;
+}   
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul a{
+    color: #292828;
+    margin: 2rem 2rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+}
+
+nav ul a:hover{
+    color: rgb(57, 72, 207);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(57, 72, 207);
+}
+
+.contenedor .main{
+    grid-area: main;
+  }
+
+h1{
+    font-family: 'Share Tech Mono', monospace;
+    color: #433555; /*color*/
+    font-size: 3rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    text-align: justify;/*alineacion de texto*/
+    padding: 1.5rem;
+}
+
+h2{
+    font-family: 'Share Tech Mono', monospace;
+    color: #433555; /*color*/
+    font-size: 2rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    text-align: center;/*alineacion de texto*/
+}
+
+h3{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Share Tech Mono', monospace;
+    color: #433555; /*color*/
+}
+
+p{
+    font-family: 'Share Tech Mono', monospace;
+    color: #20212b; /*color*/
+    font-size: 1rem; /*tamaño de letra*/
+    word-spacing: 2px; /*separacion entre palabras*/
+    padding: 10px;/*separacion entre parrafos*/
+    margin: 5px;
+    line-height: 1.3; /*separacion entre lineas*/
+}
+
+a{
+    font-family: 'Share Tech Mono', monospace;
+    text-decoration: none;
+    color: #20212b;
+    font-size: 1.1rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    padding: 10px;/*separacion entre parrafos*/
+    margin: 5px;
+}
+
+/* aplicando GRIDS */
+.catalogos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2 1fr);
+    gap: 1px;
+    margin: 50px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards img{
+    width: 350px;
+    height: 350px;
+    border: 2px double rgb(20, 20, 20);
+    margin: 20px;
+    border-radius: 4px;
+}
+
+/* sombreado al posicionarse sobre la img */
+.cards img:hover{
+    /* sombreado detras */
+    box-shadow: 18px 21px 14px -6px rgba(94,77,77,0.76);
+    /* aumenta y adelanta la imagen */
+    width: 22rem;
+    /* tiempo de transicion */
+    transition: all 0.5s;
+}
+
+.nuevosProductos{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+
+.nuevosProductos img{
+    width: 300px;
+    height: auto;
+    border: 2px double rgb(20, 20, 20);
+    margin: 15px;
+}
+
+.nuevosProductos img:hover{
+    /* sombreado detras */
+    box-shadow: 18px 21px 14px -6px rgba(94,77,77,0.76);
+    /* aumenta y adelanta la imagen */
+    width: 19rem;
+    /* tiempo de transicion */
+    transition: all 0.5s;
+}
+
+.sobreNosotros{
+    background-size:cover;
+}
+
+.sobreNosotros p{
+    padding: 50px;/*separacion entre parrafos*/
+    margin: 20px;
+    line-height: 30px;
+}
+
+.sobreNosotros h2{
+    margin: 50px;
+}
+
+.sobreNosotros h3{
+    margin: 20px;
+}
+
+fieldset{
+    padding: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem; /*tamaño de letra*/
+    word-spacing: 2px; /*separacion entre palabras*/
+    padding: 20px;/*separacion entre parrafos*/
+    margin: 8px;
+    line-height: 1.3; /*separacion entre lineas*/
+}
+
+.compras{
+    margin-top: .1rem;
+    padding: .5rem;
+}
+
+.compras img{
+    /* position: absolute; */
+    width: 10rem;
+    height: auto;
+    border: 1.5px double rgb(20, 20, 20);
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.compras ul{
+    list-style: none;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.compras h3{
+    color: #292828;
+    padding: 5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+}
+
+.compras{
+    margin-top: .1rem;
+    padding: .5rem;
+}
+
+.totalCompras{
+    margin-top: .1rem;
+    padding: .5rem;
+}
+
+.totalCompras ul{
+    list-style: none;
+    background-color: #ffffff;
+    /* display: flex; */
+    justify-content: flex-end;
+}
+
+.compras li{
+    color: #292828;
+    padding: 2rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+}
+.carro{
+    /* ubicacion fija con respecto a pantalla */
+    position: fixed;
+    /* ubicacion con respecto al eje vertical */
+    bottom: 3%;
+    /* ubicacion con respecto al eje horizontal */
+    right: 1.5%;
+}
+
+.carro a img{
+    /* tamaño del elemento */
+    width: 56px;
+    height: auto;
+}
+
+.contenedor .redes {
+    background: #3a3a3b;
+    /* color: #fff; */
+    height: 100px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.contenedor .redes {
+    grid-area: redes;
+}
+
+.redes > a{
+    margin-left: 30px;
+    color: #fff;
+}
+
+/* aplica grid al footer */
+.contenedor .footer {
+    /* background: #12203e; */
+    /* color: #fff; */
+    grid-area: footer;
+  }
+
+.footer{
+    background-color: #3a3a3b;
+    background-size: contain;
+}
+
+.footer ol{
+    /* elementos horizontales */
+    display: flex;
+    justify-content: space-between;
+    /* separacion con borde inferior */
+    margin: 0px;
+    /* ancho del fondo */
+    padding: 50px;
+}
+
+.footer > ol > h2{
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* pequeño */
+@media screen and (max-whidth: 576px) {
+    .catalogos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2 1fr);
+        /* gap: 1px; */
+        /* margin: 50px; */
+    }
+  }
+
+/* mediano */
+@media screen and (max-whidth: 768px) {
+    .contenedor {
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "redes redes redes"
+        "footer footer footer";
+    }
+  }
+
+  /* grande */
+/* @media screen and (max-whidth: 992px) {
+    .contenedor {
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "redes redes redes"
+        "footer footer footer";
+    }
+
+  
